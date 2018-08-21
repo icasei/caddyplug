@@ -20,7 +20,7 @@ const (
 	dnsProvidersVersion = "master"
 
 	directivesFile      = "github.com/mholt/caddy/caddyhttp/httpserver/plugin.go"
-	dnsProvidersPackage = "github.com/caddyserver/dnsproviders"
+	dnsProvidersPackage = "github.com/icasei/dnsproviders"
 	caddyPackage        = "github.com/mholt/caddy"
 
 	pluginSrc = `package main
