@@ -6,7 +6,7 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/mholt/caddy"
+	"github.com/icasei/caddy"
 )
 
 const (
