@@ -18,10 +18,16 @@ type dependencies []struct {
 	updateFunc func() error
 }
 
+//var packageDependecies = dependencies{
+//	{name: "caddy", importPath: "github.com/icasei/caddy", updateFunc: fetchCaddy},
+//	{name: "dnsproviders", importPath: "github.com/caddyserver/dnsproviders", updateFunc: fetchDNSProviders},
+//	{name: "hook.pluginloader", importPath: "github.com/abiosoft/caddyplug", updateFunc: fetchCaddyPlug},
+//}
+
 var packageDependecies = dependencies{
 	{name: "caddy", importPath: "github.com/icasei/caddy", updateFunc: fetchCaddy},
-	{name: "dnsproviders", importPath: "github.com/caddyserver/dnsproviders", updateFunc: fetchDNSProviders},
-	{name: "hook.pluginloader", importPath: "github.com/abiosoft/caddyplug", updateFunc: fetchCaddyPlug},
+	{name: "dnsproviders", importPath: "github.com/icasei/dnsproviders", updateFunc: fetchDNSProviders},
+	{name: "hook.pluginloader", importPath: "github.com/icasei/caddyplug", updateFunc: fetchCaddyPlug},
 }
 
 func (d dependencies) installed() bool {
@@ -98,7 +104,7 @@ func fetchCaddy() error {
 }
 
 func fetchCaddyPlug() error {
-	return install("github.com/abiosoft/caddyplug")
+	return install("github.com/icasei/caddyplug")
 }
 
 func fetchDNSProviders() error {
